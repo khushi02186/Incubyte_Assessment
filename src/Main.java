@@ -13,6 +13,6 @@ public class Main {
         }
 
     public String getPositionAndDirection() {
-        return "-1";
+        return "1";
     }
 }
