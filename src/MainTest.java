@@ -50,4 +50,10 @@ public class MainTest {
         Assertions.assertEquals("(0, 0, 0) - D", spacecraft.getPositionAndDirection());
     }
 
+    @Test
+    public void givenTest() {
+        Main spacecraft = new Main();
+        spacecraft.executeCommands(new char[]{'f','r','u','b','l'});
+        Assertions.assertEquals("(0, 1, -1) - N", spacecraft.getPositionAndDirection());
+    }
 }
