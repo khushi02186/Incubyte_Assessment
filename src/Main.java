@@ -28,6 +28,9 @@ public class Main {
             case 'f':
                 moveForward();
                 break;
+            case 'b':
+                moveBackward();
+                break;
         }
     }
 
@@ -53,13 +56,36 @@ public class Main {
                 break;
         }
     }
+
+    public void moveBackward() {
+        switch (direction) {
+            case 'N':
+                y--;
+                break;
+            case 'S':
+                y++;
+                break;
+            case 'E':
+                x--;
+                break;
+            case 'W':
+                x++;
+                break;
+            case 'U':
+                z--;
+                break;
+            case 'D':
+                z++;
+                break;
+        }
+    }
     public String getPositionAndDirection() {
         return "(" + x + ", " + y + ", " + z + ") - " + direction;
     }
     public static void main(String[] args) {
         Main spacecraft = new Main();
         System.out.println("Initial Position: " + spacecraft.getPositionAndDirection());
-        char[] commands={'f','f','f'};
+        char[] commands={'b','b','b'};
         spacecraft.executeCommands(commands);
         // Print the final position and direction
         System.out.println("Final Position: " + spacecraft.getPositionAndDirection());
