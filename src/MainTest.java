@@ -56,4 +56,19 @@ public class MainTest {
         spacecraft.executeCommands(new char[]{'f','r','u','b','l'});
         Assertions.assertEquals("(0, 1, -1) - N", spacecraft.getPositionAndDirection());
     }
+
+    @Test
+    public void test1() {
+        Main spacecraft = new Main();
+        spacecraft.executeCommands(new char[]{'f','l','l','r'});
+        Assertions.assertEquals("(0, 1, 0) - W", spacecraft.getPositionAndDirection());
+    }
+
+    @Test
+    public void test2() {
+        Main spacecraft = new Main();
+        spacecraft.executeCommands(new char[]{'f','r','f','l','b','r','f'});
+        Assertions.assertEquals("(2, 0, 0) - E", spacecraft.getPositionAndDirection());
+    }
+
 }
