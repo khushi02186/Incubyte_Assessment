@@ -156,7 +156,7 @@ public class Main {
     }
     public void turnUp() {
         secondry_direction=direction;
-        if (direction == 'N' || direction == 'S'||direction == 'E'||direction == 'W') {
+        if (direction == 'N' || direction == 'S'||direction == 'E'|| direction == 'W') {
             direction = 'U';
         }
 
