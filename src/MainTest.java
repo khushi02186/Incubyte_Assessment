@@ -17,5 +17,11 @@ public class MainTest {
         spacecraft.executeCommands(new char[]{'f','f','f'});
         Assertions.assertEquals("(0, 3, 0) - N", spacecraft.getPositionAndDirection());
     }
+    @Test
+    public void testBackwardMovement() {
+        Main spacecraft = new Main();
+        spacecraft.executeCommands(new char[]{'b','b','b'});
+        Assertions.assertEquals("(0, -3, 0) - N", spacecraft.getPositionAndDirection());
+    }
 
 }
