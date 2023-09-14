@@ -4,6 +4,19 @@
 
 
 public class Main {
+    private int x;
+    private int y;
+    private int z;
+    private char direction;  // N, S, E, W, U, D
+    private char secondry_direction;
+
+    public Main() {
+        this.x = 0;
+        this.y = 0;
+        this.z = 0;
+        this.direction = 'N';
+
+    }
     public static void main(String[] args) {
         Main spacecraft = new Main();
         System.out.println("Initial Position: " + spacecraft.getPositionAndDirection());
@@ -13,6 +26,6 @@ public class Main {
         }
 
     public String getPositionAndDirection() {
-        return "1";
+        return "(" + x + ", " + y + ", " + z + ") - " + direction;
     }
 }
