@@ -24,4 +24,11 @@ public class MainTest {
         Assertions.assertEquals("(0, -3, 0) - N", spacecraft.getPositionAndDirection());
     }
 
+    @Test
+    public void testLeftMovement() {
+        Main spacecraft = new Main();
+        spacecraft.executeCommands(new char[]{'l','l','l'});
+        Assertions.assertEquals("(0, 0, 0) - E", spacecraft.getPositionAndDirection());
+    }
+
 }
