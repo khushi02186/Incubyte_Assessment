@@ -31,6 +31,10 @@ public class Main {
             case 'b':
                 moveBackward();
                 break;
+            case 'l':
+                turnLeft();
+                break;
+
         }
     }
 
@@ -79,13 +83,47 @@ public class Main {
                 break;
         }
     }
+    public void turnLeft() {
+        if(direction=='U'||direction=='D'){
+            switch (secondry_direction){
+                case 'N':
+                    direction = 'W';
+                    break;
+                case 'S':
+                    direction = 'E';
+                    break;
+                case 'E':
+                    direction = 'N';
+                    break;
+                case 'W':
+                    direction = 'S';
+                    break;
+            }
+        }
+        else{
+            switch (direction) {
+                case 'N':
+                    direction = 'W';
+                    break;
+                case 'S':
+                    direction = 'E';
+                    break;
+                case 'E':
+                    direction = 'N';
+                    break;
+                case 'W':
+                    direction = 'S';
+                    break;
+            }
+        }
+    }
     public String getPositionAndDirection() {
         return "(" + x + ", " + y + ", " + z + ") - " + direction;
     }
     public static void main(String[] args) {
         Main spacecraft = new Main();
         System.out.println("Initial Position: " + spacecraft.getPositionAndDirection());
-        char[] commands={'b','b','b'};
+        char[] commands={'l','l','l'};
         spacecraft.executeCommands(commands);
         // Print the final position and direction
         System.out.println("Final Position: " + spacecraft.getPositionAndDirection());
