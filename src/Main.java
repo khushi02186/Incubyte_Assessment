@@ -25,6 +25,8 @@ public class Main {
         System.out.println("Final Position: " + spacecraft.getPositionAndDirection());
         }
 
+
+
     public String getPositionAndDirection() {
         return "(" + x + ", " + y + ", " + z + ") - " + direction;
     }
