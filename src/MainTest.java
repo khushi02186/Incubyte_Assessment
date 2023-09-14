@@ -36,5 +36,11 @@ public class MainTest {
         spacecraft.executeCommands(new char[]{'r','r','r'});
         Assertions.assertEquals("(0, 0, 0) - W", spacecraft.getPositionAndDirection());
     }
+    @Test
+    public void testUpwardTurn() {
+        Main spacecraft = new Main();
+        spacecraft.executeCommands(new char[]{'u','u','u'});
+        Assertions.assertEquals("(0, 0, 0) - U", spacecraft.getPositionAndDirection());
+    }
 
 }
