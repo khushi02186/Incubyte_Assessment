@@ -1,0 +1,2 @@
+# Incubyte_Assessment
+I've created a Java program that manages the spacecraft's position, direction, and executes commands for moving forward/backward, turning left/right, and adjusting its angle up/down. It follows strict rules, and I've included unit tests to ensure accuracy.
